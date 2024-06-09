@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login: React.FC = () => {
-  const [username, setUserName] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
@@ -19,15 +19,15 @@ const Login: React.FC = () => {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-        <h2>Login</h2>
+        <h2>Tobeto Log Giriş</h2>
         <div className="form-group">
-          <label htmlFor="text">Username:</label>
+          <label htmlFor="text">Email:</label>
           <input
             type="text"
             id="text"
-            value={username}
-            onChange={(e) => setUserName(e.target.value)}
-            placeholder="Enter your username"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your mail"
             required
           />
         </div>
