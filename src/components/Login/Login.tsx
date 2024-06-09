@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login: React.FC = () => {
@@ -42,7 +42,7 @@ const Login: React.FC = () => {
             required
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit"><Link to='/about'> Login</Link></button>
         <button type="button" onClick={handleRegisterRedirect}>
           Register
         </button>

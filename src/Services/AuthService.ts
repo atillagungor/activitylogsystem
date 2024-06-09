@@ -1,21 +1,21 @@
-import { AxiosResponse } from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { LoginRequestModel } from '../Models/Requests/Auth/LoginRequestModel';
 import { RegisterRequestModel } from '../Models/Requests/Auth/RegisterRequestModel';
 import { TokenModel } from '../Models/Responses/Token/TokenModel';
 import axiosInstance from '../core/interceptors/axiosInterceptor';
+import { BASE_API_URL } from '../environment/environment';
 
-const login = 'Auths/login';
 const register = 'Auths/register';
 
 class AuthService {
   login(loginRequest: LoginRequestModel): Promise<AxiosResponse<TokenModel, any>> {
-    return axiosInstance.post(login, loginRequest);
+    return axios.post<TokenModel>(BASE_API_URL+'Auths/login',loginRequest);
   }
 
   register(
     registerRequest: RegisterRequestModel
   ): Promise<AxiosResponse<TokenModel, any>> {
-    return axiosInstance.post(register, registerRequest);
+    return axios.post(BASE_API_URL+'Auths/register', registerRequest);
   }
 }
 
