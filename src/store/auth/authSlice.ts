@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import tokenService from "../../core/services/tokenService";
-import { store } from "../configureStore";
-import { platformActions } from "../platform/platformSlice";
 
 const getInitialState = () => {
 	if (tokenService.hasToken()) return { isAuthenticated: true };
