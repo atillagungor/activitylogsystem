@@ -2,10 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import { LoginRequestModel } from '../Models/Requests/Auth/LoginRequestModel';
 import { RegisterRequestModel } from '../Models/Requests/Auth/RegisterRequestModel';
 import { TokenModel } from '../Models/Responses/Token/TokenModel';
-import axiosInstance from '../core/interceptors/axiosInterceptor';
 import { BASE_API_URL } from '../environment/environment';
-
-const register = 'Auths/register';
 
 class AuthService {
   login(loginRequest: LoginRequestModel): Promise<AxiosResponse<TokenModel, any>> {
