@@ -20,8 +20,8 @@ const authSlice = createSlice({
 			state.isAuthenticated = tokenService.hasToken();
 		},
 		logout: (state) => {
-			tokenService.removeToken();			
-			state.isAuthenticated = false;			
+			tokenService.removeToken();
+			state.isAuthenticated = false;
 		}
 	},
 });

@@ -1,4 +1,5 @@
 import toastr from "toastr";
+
 import {BUSINESS_ERROR, VALIDATION_ERROR} from "./errorTypes";
 
 export const handleError = (error: any) => {

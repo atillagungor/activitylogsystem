@@ -21,7 +21,7 @@ class AuthService {
     } catch (error: any) {
       throw (error as AxiosError).response?.data || error;
     }
-  }  
+  }
 }
 
 export default new AuthService();

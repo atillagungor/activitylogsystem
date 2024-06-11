@@ -1,8 +1,8 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const loadingSlice = createSlice({
 	name: "loading",
-	initialState: {requestCount: 0},
+	initialState: { requestCount: 0 },
 	reducers: {
 		addRequest: state => {
 			state.requestCount++;
@@ -16,4 +16,4 @@ const loadingSlice = createSlice({
 });
 
 export const loadingReducer = loadingSlice.reducer;
-export const {addRequest, removeRequest} = loadingSlice.actions;
+export const { addRequest, removeRequest } = loadingSlice.actions;

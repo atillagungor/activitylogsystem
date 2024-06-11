@@ -5,7 +5,7 @@ import './Home.css';
 const Home: React.FC = () => {
   return (
     <div className="home-container">
-      <Navbar/>
+      <Navbar />
       <div className="home-content">
         <div className="home-card">
           <h2 className="home-card-title">Tobeto Log Sistemi Denemesi 1</h2>

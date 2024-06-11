@@ -27,7 +27,7 @@ const Main: React.FC = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
