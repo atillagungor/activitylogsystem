@@ -1,0 +1,29 @@
+.custom-toast {
+    background-color: #333333 !important;
+    /* Arka plan rengi */
+    color: #ffffff !important;
+    /* Yazı rengi */
+    font-size: 16px !important;
+    /* Yazı boyutu */
+}
+
+.custom-toast-error {
+    background-color: #ff0000 !important;
+    /* Hata mesajı arka plan rengi */
+    color: #ffffff !important;
+    /* Yazı rengi */
+}
+
+.custom-toast-success {
+    background-color: #00ff00 !important;
+    /* Başarı mesajı arka plan rengi */
+    color: #000000 !important;
+    /* Yazı rengi */
+}
+
+.custom-toast-warning {
+    background-color: #ffcc00 !important;
+    /* Uyarı mesajı arka plan rengi */
+    color: #000000 !important;
+    /* Yazı rengi */
+}

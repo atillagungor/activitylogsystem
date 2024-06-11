@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
+import './Toastr.css';
+import AuthService from '../../Services/AuthService';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AuthService from '../../Services/AuthService';
+import axios, { AxiosError } from 'axios';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -15,12 +17,32 @@ const Login: React.FC = () => {
 
     try {
       const response = await AuthService.login({ email, password });
-      if (response.status === 200) {
-        console.log('Giriş başarılı:', response.data);
-        navigate('/home');
-      }
+      console.log('Giriş başarılı:', response);
+      toast.success('Giriş başarılı!', {
+        className: 'custom-toast custom-toast-success',
+      });
+      navigate('/home');
     } catch (error) {
-      toast.error('Giriş hatası: Lütfen bilgilerinizi kontrol edin.');
+      if (axios.isAxiosError(error)) {
+        if (error.response) {
+          toast.error('Giriş hatası: Lütfen bilgilerinizi kontrol edin.', {
+            className: 'custom-toast custom-toast-error',
+          });
+        } else if (error.request) {
+          toast.warning('Sunucu hatası: Lütfen daha sonra tekrar deneyin.', {
+            className: 'custom-toast custom-toast-warning',
+          });
+        } else {
+          toast.error('Bilinmeyen hata.', {
+            className: 'custom-toast custom-toast-error',
+          });
+        }
+      } else {
+        // Axios dışındaki hatalar için genel bir hata mesajı
+        toast.error('Bir hata oluştu.', {
+          className: 'custom-toast custom-toast-error',
+        });
+      }
       console.error('Giriş hatası:', error);
     }
   };
