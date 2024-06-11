@@ -4,31 +4,22 @@ import './Home.css';
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className="home-container">
       <Navbar/>
-      <div className="row">
-  <div className="col-sm-6 mb-3 mb-sm-0">
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">Tobeto Log Sistemi Denemesi</h5>
-        <p className="card-text">Örnek olarak tıklanacak buton 1</p>
-        <a href="#" className="btn btn-primary">Buraya Tıkla</a>
+      <div className="home-content">
+        <div className="home-card">
+          <h2 className="home-card-title">Tobeto Log Sistemi Denemesi 1</h2>
+          <p className="home-card-text">Bu kısımda sistemle ilgili bir açıklama yapabilirsiniz.</p>
+          <button className="home-card-button">Butona Tıkla</button>
+        </div>
+        <div className="home-card">
+          <h2 className="home-card-title">Tobeto Log Sistemi Denemesi 2</h2>
+          <p className="home-card-text">Bu kısımda sistemle ilgili bir açıklama yapabilirsiniz.</p>
+          <button className="home-card-button">Butona Tıkla</button>
+        </div>
       </div>
-    </div>
-  </div>
-  <div className="col-sm-6">
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">Tobeto Log Sistemi Denemesi</h5>
-        <p className="card-text">Örnek olarak tıklanacak buton 2</p>
-        <a href="#" className="btn btn-primary">Buraya Tıkla</a>
-      </div>
-    </div>
-  </div>
-</div>
     </div>
   );
 };
 
 export default Home;
-

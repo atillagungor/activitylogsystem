@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Register from './components/Register/Register';
 import About from './pages/About';
 import Navbar from './components/Navbar/Navbar';
+import Contact from './pages/Contact';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const Main: React.FC = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
     </div>
   );
